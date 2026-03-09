@@ -80,14 +80,16 @@ export default function EliteCardSection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.9, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="elite-card-section__title">
-            Invest with absolute ease
-          </h2>
-          <p className="elite-card-section__paragraph">
-            Your Elite Wealth Club card enables smooth, secure transactions and
-            privileged access across investments, services, and curated
-            experiences.
-          </p>
+          <div className="elite-card-section__content">
+            <h2 className="elite-card-section__title">
+              Invest with absolute ease
+            </h2>
+            <p className="elite-card-section__paragraph">
+              Your Elite Wealth Club card enables smooth, secure transactions and
+              privileged access across investments, services, and curated
+              experiences.
+            </p>
+          </div>
           <button type="button" className="elite-card-section__btn">
             Join Now
           </button>

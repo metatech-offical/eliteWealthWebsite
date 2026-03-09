@@ -39,10 +39,10 @@
   width: calc(100% - 48px);
   padding: 48px;
   border-radius: 20px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(60, 40, 28, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: #fff;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
 }
@@ -87,7 +87,7 @@
 .protection-section__btn {
   padding: 14px 28px;
   border-radius: 9999px;
-  background: #e17055;
+  background: rgba(35, 16, 11, 0.9);
   color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
@@ -98,7 +98,7 @@
 }
 
 .protection-section__btn:hover {
-  background: #ff7b5c;
+  background: rgba(50, 24, 14, 0.95);
 }
 
 @media (max-width: 768px) {

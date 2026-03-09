@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import "./ProtectionSection.css";
 
 const listItems = [
-  "Built in 2013 with a singular focus on security.",
-  "Fully licensed bank and Bitcoin custodian.",
-  "Decentralised multi-party computation protection.",
-  "Designed and managed by world-class experts.",
+  "Built in 2013 with a singular focus on being the safest place to hold Bitcoin, supported by a proven track record spanning over a decade.",
+  "Operates as a fully licensed bank and Bitcoin custodian, providing institutional-grade oversight and guaranteed protections for fiat deposits.",
+  "Secured through decentralised multi-party computation (MPC) technology alongside a global network of undisclosed, high-security bunkers protected by armed guards.",
+  "Designed and managed by experts, this security infrastructure has protected members' Bitcoin holdings without compromise for more than ten years.",
 ];
 
 export default function ProtectionSection() {

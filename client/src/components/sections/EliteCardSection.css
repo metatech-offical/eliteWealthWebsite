@@ -76,48 +76,61 @@
 /* TEXT BOX BELOW CARD – prominent info */
 .elite-card-section__text-box {
   margin-top: 56px;
-  background: #5a2a18;
-  padding: 48px 44px;
-  border-radius: 20px;
-  max-width: 42rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 48px 60px;
+  border-radius: 24px;
+  max-width: 64rem;
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.elite-card-section__content {
+  flex: 1;
+  text-align: left;
 }
 
 .elite-card-section__title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.25rem;
-  font-weight: 600;
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  font-weight: 500;
   color: #ffffff;
-  margin: 0 0 20px 0;
-  line-height: 1.25;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
 }
 
 .elite-card-section__paragraph {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.5);
   font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
-  line-height: 1.7;
-  margin: 0 0 28px 0;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 32rem;
 }
 
 .elite-card-section__btn {
-  padding: 14px 28px;
-  border-radius: 9999px;
-  background: #e17055;
+  padding: 16px 36px;
+  border-radius: 12px;
+  background: rgba(35, 16, 11, 0.8);
   color: #fff;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.0625rem;
-  font-weight: 500;
-  border: none;
+  font-size: 1.125rem;
+  font-weight: 400;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .elite-card-section__btn:hover {
-  background: #ff7b5c;
+  background: rgba(35, 16, 11, 1);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 600px) {
@@ -161,6 +174,13 @@
 
   .elite-card-section__text-box {
     padding: 32px 24px;
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .elite-card-section__content {
+    text-align: center;
   }
 
   .elite-card-section__title {
@@ -169,5 +189,6 @@
 
   .elite-card-section__paragraph {
     font-size: 1rem;
+    max-width: 100%;
   }
 }
