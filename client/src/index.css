@@ -1,0 +1,61 @@
+:root {
+  /* Colors */
+  --color-base: #23100b;
+  --color-primary-accent: #ff4d00;
+  --color-secondary-accent: #c2593d;
+  --color-tertiary-accent: #d2846f;
+  
+  --color-surface-light: #f9eeec;
+  --color-surface-lighter: #faf5ed;
+  
+  --color-text-dark: #1e1e1e;
+  --color-text-medium: #444444;
+  --color-text-light: #737780;
+  --color-text-white: #ffffff;
+  
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e6e6e6;
+  --color-gray-300: #cccccc;
+  --color-gray-800: #333333;
+  --color-gray-900: #1a1a1a;
+  
+  /* Fonts */
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Lora', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-accent: 'Aldrich', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-base);
+  color: var(--color-text-white);
+}
+
+body {
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

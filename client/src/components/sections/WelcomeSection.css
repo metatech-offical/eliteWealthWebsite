@@ -1,0 +1,104 @@
+/* WelcomeSection – matches Figma */
+
+.welcome-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+
+/* Background image – URL set in JS via process.env.PUBLIC_URL */
+.welcome-section__background-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Bottom dark luxury gradient overlay */
+.welcome-section__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(35, 16, 11, 0.5) 60%,
+    rgba(35, 16, 11, 0.95) 100%
+  );
+  z-index: 2;
+}
+
+/* Content container */
+.welcome-section__content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  padding: 0 40px;
+}
+
+/* Title – single line */
+.welcome-section__title {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 48px; /* updated based on figma */
+  line-height: 100%;
+  letter-spacing: 0;
+  color: var(--color-text-white);
+  margin: 0 0 24px 0;
+  white-space: nowrap;
+}
+
+/* Paragraph */
+.welcome-section__paragraph {
+  font-family: var(--font-sans); /* Figma body text uses Inter */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #d5d5d5;
+  max-width: 775px;
+  margin: 0 auto;
+}
+
+/* Responsive: below 1200px */
+@media (max-width: 1199px) {
+  .welcome-section__title {
+    font-size: 32px;
+  }
+}
+
+/* Responsive: below 992px */
+@media (max-width: 991px) {
+  .welcome-section__title {
+    font-size: 28px;
+  }
+
+  .welcome-section__paragraph {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+/* Responsive: below 768px – allow wrap on small screens to avoid overflow */
+@media (max-width: 767px) {
+  .welcome-section__title {
+    font-size: 22px;
+    white-space: normal;
+  }
+
+  .welcome-section__paragraph {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .welcome-section__content {
+    padding: 0 24px;
+  }
+}

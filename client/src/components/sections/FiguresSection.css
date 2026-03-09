@@ -1,0 +1,116 @@
+/* FiguresSection – dark bg, badge + text left, 2x2 stats grid right */
+
+.figures-section {
+  background: var(--color-base, #23100b);
+  color: var(--color-text-white);
+  padding: 80px 60px;
+  box-sizing: border-box;
+}
+
+.figures-section__container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ── Left: badge + paragraph ── */
+.figures-section__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.figures-section__badge {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 9999px;
+  padding: 8px 22px;
+  font-size: 13px;
+  font-family: var(--font-primary, 'Montserrat', sans-serif);
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.figures-section__text {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  font-family: var(--font-primary, 'Montserrat', sans-serif);
+  text-align: left;
+}
+
+/* ── Right: 2x2 stat grid with dividers ── */
+.figures-section__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+}
+
+/* Thin border dividers between all 4 cells */
+.figures-section__stat {
+  position: relative;
+  padding: 60px 50px; /* Increased padding for more distance */
+}
+
+/* Left border on every stat (vertical divider) */
+.figures-section__stat::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+
+
+.figures-section__value {
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 600;
+  color: #d44f20;   /* orange-terracotta accent */
+  font-family: var(--font-primary, 'Montserrat', sans-serif);
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.figures-section__label {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: var(--font-primary, 'Montserrat', sans-serif);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .figures-section__container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .figures-section {
+    padding: 60px 24px;
+  }
+
+  .figures-section__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .figures-section__stat {
+    padding: 32px 24px;
+  }
+
+  .figures-section__value {
+    font-size: 36px;
+  }
+}

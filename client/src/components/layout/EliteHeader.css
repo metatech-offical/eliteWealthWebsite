@@ -1,0 +1,243 @@
+/* EliteHeader – sticky premium glass header (transparent, blur 30px, 20% smaller) */
+
+.elite-header {
+  height: 72px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px; /* 20% decrease from 80px */
+}
+
+.elite-header__left {
+  display: flex;
+  align-items: center;
+}
+
+.elite-header__logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.elite-header__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Button 1 – Download Fact Sheet (20% smaller) */
+.elite-header__btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.elite-header__btn--download {
+  background: #4c3d34;
+  color: white;
+  font-weight: 500;
+}
+
+.elite-header__btn--download:hover {
+  opacity: 0.85;
+}
+
+.elite-header__btn-icon {
+  flex-shrink: 0;
+}
+
+/* Button 2 – Join Now */
+.elite-header__btn--join {
+  background: #23100b;
+  color: white;
+  font-weight: 600;
+}
+
+.elite-header__btn--join:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Menu button */
+.elite-header__menu-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+.elite-header__menu-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.elite-header__menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18px;
+  height: 18px;
+}
+
+.elite-header__menu-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  border-radius: 1px;
+}
+
+/* Responsive: < 1024px */
+@media (max-width: 1023px) {
+  .elite-header {
+    padding: 0 32px;
+  }
+}
+
+/* Responsive: < 768px – hide buttons, only logo + menu */
+@media (max-width: 767px) {
+  .elite-header {
+    height: 60px;
+    padding: 0 24px;
+  }
+
+  .elite-header__btn--download,
+  .elite-header__btn--join {
+    display: none;
+  }
+
+  .elite-header__logo {
+    height: 32px;
+  }
+
+  .elite-header__menu-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .elite-header__menu-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* ========== Menu overlay ========== */
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0;
+  z-index: 2000;
+}
+
+/* Panel flush to top-right corner; rectangular (no rounded corners) */
+.menu-overlay__panel {
+  width: 600px;
+  max-width: calc(100vw - 32px);
+  min-height: auto;
+  max-height: 80vh;
+  background: #23100b;
+  border-radius: 0;
+  padding: 40px;
+  position: relative;
+  animation: slideDown 0.4s ease forwards;
+  overflow-y: auto;
+}
+
+/* Top section: logo left, close right */
+.menu-overlay__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-overlay__logo-wrap img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.menu-overlay__close {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #c96a44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  color: white;
+}
+
+.menu-overlay__close:hover {
+  opacity: 0.9;
+}
+
+/* Menu items */
+.menu-overlay__nav {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.menu-overlay__link {
+  font-family: 'Lora', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #d6d6d6;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-overlay__link:hover {
+  color: #ffffff;
+  transform: translateX(8px);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

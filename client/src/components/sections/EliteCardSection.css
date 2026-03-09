@@ -1,0 +1,173 @@
+.elite-card-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-base);
+  overflow: visible;
+  padding: 80px 24px;
+  box-sizing: border-box;
+}
+
+.elite-card-section__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CARD – larger size */
+.elite-card-section__card {
+  position: relative;
+  width: 560px;
+  max-width: 100%;
+  height: 320px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom right, #a77445, #3c2a1e);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.elite-card-section__brand {
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.elite-card-section__subbrand {
+  position: absolute;
+  top: 78px;
+  left: 40px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.85rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.elite-card-section__name {
+  position: absolute;
+  bottom: 32px;
+  left: 40px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.elite-card-section__number {
+  position: absolute;
+  bottom: 32px;
+  right: 40px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* TEXT BOX BELOW CARD – prominent info */
+.elite-card-section__text-box {
+  margin-top: 56px;
+  background: #5a2a18;
+  padding: 48px 44px;
+  border-radius: 20px;
+  max-width: 42rem;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.elite-card-section__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  line-height: 1.25;
+}
+
+.elite-card-section__paragraph {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin: 0 0 28px 0;
+}
+
+.elite-card-section__btn {
+  padding: 14px 28px;
+  border-radius: 9999px;
+  background: #e17055;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.elite-card-section__btn:hover {
+  background: #ff7b5c;
+}
+
+@media (max-width: 600px) {
+  .elite-card-section__card {
+    width: 100%;
+    height: 260px;
+  }
+
+  .elite-card-section__brand {
+    font-size: 2rem;
+  }
+
+  .elite-card-section__subbrand {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+  }
+
+  .elite-card-section__name,
+  .elite-card-section__number {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .elite-card-section__card {
+    height: 220px;
+  }
+
+  .elite-card-section__brand {
+    font-size: 1.65rem;
+  }
+
+  .elite-card-section__subbrand {
+    font-size: 0.6rem;
+  }
+
+  .elite-card-section__name,
+  .elite-card-section__number {
+    font-size: 0.8rem;
+  }
+
+  .elite-card-section__text-box {
+    padding: 32px 24px;
+  }
+
+  .elite-card-section__title {
+    font-size: 1.75rem;
+  }
+
+  .elite-card-section__paragraph {
+    font-size: 1rem;
+  }
+}

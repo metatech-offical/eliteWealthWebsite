@@ -1,0 +1,118 @@
+/* One frame – image fills viewport, then text appears */
+.protection-section {
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #23100b;
+}
+
+.protection-section__bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.protection-section__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.protection-section__card {
+  position: relative;
+  z-index: 1;
+  max-width: 48rem;
+  width: calc(100% - 48px);
+  padding: 48px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+}
+
+.protection-section__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+  line-height: 1.3;
+}
+
+.protection-section__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+
+.protection-section__list li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  padding: 10px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.protection-section__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.protection-section__btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.protection-section__btn {
+  padding: 14px 28px;
+  border-radius: 9999px;
+  background: #e17055;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.protection-section__btn:hover {
+  background: #ff7b5c;
+}
+
+@media (max-width: 768px) {
+  .protection-section__card {
+    padding: 32px 24px;
+    width: calc(100% - 32px);
+  }
+
+  .protection-section__title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .protection-section__list li {
+    font-size: 0.875rem;
+  }
+}
