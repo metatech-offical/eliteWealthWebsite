@@ -231,6 +231,26 @@
   transform: translateX(8px);
 }
 
+.menu-overlay__contact-btn {
+  align-self: flex-start;
+  margin-top: 12px;
+  padding: 14px 36px;
+  border-radius: 12px;
+  border: none;
+  background: #c0613a;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu-overlay__contact-btn:hover {
+  background: #a84f2e;
+  transform: translateY(-2px);
+}
+
 @keyframes slideDown {
   from {
     opacity: 0;

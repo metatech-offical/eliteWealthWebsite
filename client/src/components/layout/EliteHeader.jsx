@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 import './EliteHeader.css';
 
@@ -11,6 +12,7 @@ const MENU_ITEMS = [
 
 function EliteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -84,6 +86,13 @@ function EliteHeader() {
                   {item.label}
                 </a>
               ))}
+              <button
+                type="button"
+                className="menu-overlay__contact-btn"
+                onClick={() => { setIsMenuOpen(false); navigate('/contact'); }}
+              >
+                Contact Us
+              </button>
             </nav>
           </div>
         </div>

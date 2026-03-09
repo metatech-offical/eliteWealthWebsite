@@ -22,7 +22,7 @@ export default function ContactPage() {
       <section className="cp-hero">
         <div
           className="cp-hero__bg"
-          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/elite-bg.jpg)` }}
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/contact-hero.png)` }}
         />
         <div className="cp-hero__overlay" />
 
