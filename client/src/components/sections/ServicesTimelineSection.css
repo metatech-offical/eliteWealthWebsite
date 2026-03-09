@@ -48,7 +48,7 @@
 .timeline-line {
   position: absolute;
   left: 50%;
-  top: 0;
+  top: 120px;
   bottom: 0;
   width: 2px;
   background: rgba(255, 120, 60, 0.2);
@@ -186,7 +186,34 @@
 /* Responsive: stack and center on smaller screens */
 @media (max-width: 768px) {
   .services-timeline {
-    padding: 48px 24px 120px;
+    padding: 48px 20px 80px;
+  }
+
+  .services-timeline__btn {
+    margin-bottom: 24px;
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+
+  .timeline-line {
+    left: 6px;
+    transform: none;
+  }
+
+  .timeline-dot {
+    left: 0;
+    transform: none;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-item {
+    margin: 48px 0;
+    padding-left: 40px;
+  }
+
+  .timeline-item:first-child {
+    margin-top: 24px;
   }
 
   .timeline-item.left .timeline-content,
@@ -194,37 +221,18 @@
     margin-left: 0;
     margin-right: 0;
     width: 100%;
-    padding-left: 40px;
-  }
-
-  .timeline-dot {
-    left: 0;
-    margin-left: 0;
-    transform: translateX(-50%);
-  }
-
-  .timeline-line {
-    left: 0;
-    transform: none;
-  }
-
-  .timeline-progress {
-    left: 0;
   }
 
   .timeline-content h3 {
-    font-size: 24px;
+    font-size: 20px;
+    word-break: break-word;
   }
 
   .timeline-content p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
-  .timeline-item {
-    margin: 48px 0;
-  }
-
-  .timeline-item:first-child {
-    margin-top: 24px;
+  .learn-btn {
+    font-size: 13px;
   }
 }

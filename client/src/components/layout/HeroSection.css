@@ -145,6 +145,11 @@
   }
 
   .hero-section__headline {
-    font-size: 24px;
+    font-size: 28px;
+    gap: 0 8px;
+  }
+
+  .hero-section__bg-image {
+    object-position: center 30%;
   }
 }

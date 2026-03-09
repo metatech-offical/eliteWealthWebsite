@@ -49,7 +49,6 @@ function TimelineItem({ item, index }) {
     >
       <motion.div
         className="timeline-dot"
-        style={{ x: "-50%" }}
         whileInView={{
           scale: 1.4,
           boxShadow: "0 0 20px rgba(255,120,60,0.8)"
