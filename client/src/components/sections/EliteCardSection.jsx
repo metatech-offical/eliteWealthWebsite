@@ -12,14 +12,14 @@ const cardInnerVariants = {
 
 export default function EliteCardSection() {
   const sectionRef = useRef(null);
-  
-  // Create true scroll-based animation for the card as requested in Figma
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "center center"]
   });
-  
-  const scale = useTransform(scrollYProgress, [0, 1], [0.75, 1.2]);
+
+  const scale = useTransform(scrollYProgress, [0, 1], isMobile ? [0.85, 1] : [0.75, 1.2]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 1]);
 
   return (

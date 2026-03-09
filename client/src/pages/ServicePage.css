@@ -535,10 +535,37 @@
 
   .sp-carousel__track {
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    gap: 12px;
   }
 
   .sp-carousel__card {
-    height: 180px;
+    height: auto;
+  }
+
+  .sp-carousel__card-image-wrap {
+    height: 220px;
+  }
+
+  .sp-carousel__card-title {
+    font-size: 13px;
+  }
+
+  .sp-carousel__card-location {
+    font-size: 10px;
+  }
+
+  .sp-carousel__card-btn {
+    font-size: 11px;
+    padding: 7px;
+  }
+
+  .sp-carousel__card-date {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .sp-carousel__card-bottom {
+    padding: 10px;
+    gap: 4px;
   }
 }

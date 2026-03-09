@@ -209,3 +209,68 @@
     padding: 36px 28px;
   }
 }
+
+@media (max-width: 600px) {
+  .invest-dreams {
+    padding: 40px 20px;
+  }
+
+  .invest-dreams__inner {
+    gap: 24px;
+  }
+
+  .invest-dreams__phone-card {
+    min-height: 360px;
+    border-radius: 18px;
+  }
+
+  .invest-dreams__contact-pill {
+    padding: 6px 12px;
+    font-size: 11px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .invest-dreams__talk-pill {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .invest-dreams__talk-avatar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .invest-dreams__card-label {
+    font-size: 12px;
+  }
+
+  .invest-dreams__info-card {
+    padding: 28px 20px;
+    border-radius: 16px;
+    gap: 20px;
+  }
+
+  .invest-dreams__title {
+    font-size: clamp(22px, 5.5vw, 28px);
+  }
+
+  .invest-dreams__desc {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .invest-dreams__actions {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .invest-dreams__btn-primary,
+  .invest-dreams__btn-secondary {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 13px;
+    justify-content: center;
+  }
+}
