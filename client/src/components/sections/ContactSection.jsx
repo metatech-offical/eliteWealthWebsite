@@ -48,7 +48,7 @@ export default function ContactSection() {
             advisors will reach out to you shortly.
           </motion.p>
 
-          <ul className="contact-section__checklist" role="list">
+          <ul className="contact-section__checklist">
             {checkItems.map((item, i) => (
               <motion.li
                 key={item}
